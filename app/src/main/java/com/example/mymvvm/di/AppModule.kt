@@ -20,7 +20,6 @@ import java.util.concurrent.TimeUnit
 val apiServiceModule = module {
 
     single { OkHttpClient.Builder()
-            .cache(get())
             .connectTimeout(Defind.CONNECT_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(Defind.WRITE_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(Defind.READ_ITEMOUT, TimeUnit.SECONDS)
@@ -50,7 +49,7 @@ val apiServiceModule = module {
 }
 
 val databaseModule = module {
-    single { Room.databaseBuilder(androidContext(), Appdatabase::class.java, Defind.APP_DATABASE_NAME) }
+    single { Room.databaseBuilder(androidContext(), Appdatabase::class.java, Defind.APP_DATABASE_NAME).build() }
 }
 
 val appModule = module {

@@ -5,6 +5,6 @@ object Defind {
     const val WRITE_TIMEOUT = 15L
     const val READ_ITEMOUT = 15L
 
-    const val BASE_URL = ""
+    const val BASE_URL = "https://naver.com"
     const val APP_DATABASE_NAME = "mydatabase"
 }
