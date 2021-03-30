@@ -12,6 +12,7 @@ buildscript {
         recyclerViewVersion = '1.2.0-alpha04'
         coroutinesVersion = "1.4.2"
         glideVersion = '4.10.0'
+        koinVersion = '2.2.2'
     }
 
     repositories {
