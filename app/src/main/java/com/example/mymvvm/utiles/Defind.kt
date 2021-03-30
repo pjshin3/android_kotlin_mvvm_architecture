@@ -6,4 +6,5 @@ object Defind {
     const val READ_ITEMOUT = 15L
 
     const val BASE_URL = ""
+    const val APP_DATABASE_NAME = "mydatabase"
 }

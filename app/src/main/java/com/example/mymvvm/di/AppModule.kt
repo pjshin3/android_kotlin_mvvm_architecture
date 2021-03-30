@@ -1,21 +1,21 @@
 package com.example.mymvvm.di
 
+import androidx.room.Room
 import com.example.mymvvm.BuildConfig
 import com.example.mymvvm.api.Apiservice
+import com.example.mymvvm.data.Appdatabase
+import com.example.mymvvm.repository.Repository
 import com.example.mymvvm.utiles.Defind
 import com.example.mymvvm.viewmodele.CommonViewModel
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-
-val viewmodelModule = module {
-    viewModel { CommonViewModel() }
-}
 
 val apiServiceModule = module {
 
@@ -47,4 +47,16 @@ val apiServiceModule = module {
             .build() }
 
     single(createdAtStart = false) { get<Retrofit>().create(Apiservice::class.java) }
+}
+
+val databaseModule = module {
+    single { Room.databaseBuilder(androidContext(), Appdatabase::class.java, Defind.APP_DATABASE_NAME) }
+}
+
+val appModule = module {
+    single { Repository(get(), get()) }
+}
+
+val viewmodelModule = module {
+    viewModel { CommonViewModel(get()) }
 }
