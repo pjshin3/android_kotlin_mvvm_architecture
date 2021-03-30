@@ -1,6 +1,7 @@
 package com.example.mymvvm
 
 import android.app.Application
+import com.example.mymvvm.di.apiServiceModule
 import com.example.mymvvm.di.viewmodelModule
 import org.koin.core.context.startKoin
 
@@ -10,7 +11,8 @@ class MyApplication : Application() {
         startKoin {
             modules(
                 listOf(
-                    viewmodelModule
+                    viewmodelModule,
+                    apiServiceModule
                 )
             )
         }
