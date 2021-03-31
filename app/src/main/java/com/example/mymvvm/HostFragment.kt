@@ -2,7 +2,6 @@ package com.example.mymvvm
 
 import android.os.Bundle
 import android.util.Log
-import android.view.MotionEvent
 import android.view.View
 import com.example.mymvvm.databinding.FragmentHostBinding
 import com.example.mymvvm.viewmodele.CommonViewModel
@@ -11,17 +10,17 @@ import org.koin.android.ext.android.inject
 class HostFragment : BaseFragment<FragmentHostBinding>(
     layoutRes = R.layout.fragment_host
 ) {
-    private val viewmodel by inject<CommonViewModel>()
+    private val viewModel by inject<CommonViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonview.setOnClickListener { viewmodel.getApiSomeText() }
+        binding.buttonview.setOnClickListener { viewModel.getSomeString() }
         subscribeUi()
     }
 
     fun subscribeUi(){
-        viewmodel.tmpLiveData.observe(viewLifecycleOwner){
-            binding.textview.text = it
+        viewModel.tmpLiveData.observe(viewLifecycleOwner){ text ->
+            binding.textview.text = text
         }
     }
 }

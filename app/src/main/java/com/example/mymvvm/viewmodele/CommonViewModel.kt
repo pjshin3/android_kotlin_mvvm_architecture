@@ -3,19 +3,22 @@ package com.example.mymvvm.viewmodele
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mymvvm.data.TmpDataModel
-import com.example.mymvvm.repository.Repository
+import androidx.lifecycle.viewModelScope
+import com.example.mymvvm.domain.SomeStringUseCase
+import com.example.mymvvm.domain.TmpModelUesCase
+import kotlinx.coroutines.launch
 
 class CommonViewModel(
-    val repository: Repository
+    private val tmpModelUesCase: TmpModelUesCase,
+    private val someStringUseCase: SomeStringUseCase
 ) : ViewModel(){
 
     private var _tmpLivedata : MutableLiveData<String> = MutableLiveData()
     val tmpLiveData : LiveData<String>
         get() = _tmpLivedata
 
-    fun getApiSomeText() {
-        _tmpLivedata.postValue(repository.getApiSomeString())
+    fun getSomeTmpModel() = tmpModelUesCase("")
+    fun getSomeString() {
+        _tmpLivedata.postValue( someStringUseCase(Unit) )
     }
-    fun getDatabaseSomeModel(): TmpDataModel = repository.getDatabaseTmpmodel()
 }

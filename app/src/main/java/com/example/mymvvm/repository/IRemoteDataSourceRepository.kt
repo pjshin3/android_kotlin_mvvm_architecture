@@ -2,6 +2,6 @@ package com.example.mymvvm.repository
 
 import com.example.mymvvm.api.Apiservice
 
-interface IApiservice{
+interface IRemoteDataSourceRepository{
     fun getString() : String
 }
