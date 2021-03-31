@@ -1,7 +1,7 @@
 package com.example.mymvvm.di
 
 import com.example.mymvvm.BuildConfig
-import com.example.mymvvm.api.Apiservice
+import com.example.mymvvm.data.remotedata.Apiservice
 import com.example.mymvvm.utiles.Defind
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

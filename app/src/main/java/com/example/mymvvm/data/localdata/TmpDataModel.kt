@@ -1,4 +1,4 @@
-package com.example.mymvvm.data
+package com.example.mymvvm.data.localdata
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

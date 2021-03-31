@@ -1,4 +1,4 @@
-package com.example.mymvvm.data
+package com.example.mymvvm.data.localdata
 
 import androidx.room.Dao
 import androidx.room.Query

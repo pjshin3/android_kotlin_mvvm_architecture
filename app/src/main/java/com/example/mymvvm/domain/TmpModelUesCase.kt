@@ -1,8 +1,7 @@
 package com.example.mymvvm.domain
 
-import com.example.mymvvm.data.TmpDataModel
-import com.example.mymvvm.repository.ILocalDataSourceRepository
-import com.example.mymvvm.repository.LocalDataSoruceRepository
+import com.example.mymvvm.data.localdata.TmpDataModel
+import com.example.mymvvm.data.localdata.ILocalDataSourceRepository
 
 typealias ITmpModelUseCase = BaseUsesCase<String, TmpDataModel>
 

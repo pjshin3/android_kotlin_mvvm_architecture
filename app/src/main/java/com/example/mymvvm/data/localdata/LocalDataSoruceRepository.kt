@@ -1,7 +1,4 @@
-package com.example.mymvvm.repository
-
-import com.example.mymvvm.data.TmpDataDao
-import com.example.mymvvm.data.TmpDataModel
+package com.example.mymvvm.data.localdata
 
 class LocalDataSoruceRepository(
     val tmpDataDao: TmpDataDao

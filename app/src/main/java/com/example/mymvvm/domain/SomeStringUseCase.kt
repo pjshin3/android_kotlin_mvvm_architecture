@@ -1,7 +1,6 @@
 package com.example.mymvvm.domain
 
-import com.example.mymvvm.repository.IRemoteDataSourceRepository
-import com.example.mymvvm.repository.RemoteDataSourceRepository
+import com.example.mymvvm.data.remotedata.IRemoteDataSourceRepository
 
 typealias ISomeStringUseCase = BaseUsesCase<Unit,String>
 

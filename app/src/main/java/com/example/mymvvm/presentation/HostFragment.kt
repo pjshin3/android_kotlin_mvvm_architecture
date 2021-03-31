@@ -1,10 +1,10 @@
-package com.example.mymvvm
+package com.example.mymvvm.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import com.example.mymvvm.R
 import com.example.mymvvm.databinding.FragmentHostBinding
-import com.example.mymvvm.viewmodele.CommonViewModel
+import com.example.mymvvm.presentation.viewmodele.CommonViewModel
 import org.koin.android.ext.android.inject
 
 class HostFragment : BaseFragment<FragmentHostBinding>(

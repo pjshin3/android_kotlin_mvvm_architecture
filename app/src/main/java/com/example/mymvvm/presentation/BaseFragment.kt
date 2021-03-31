@@ -1,4 +1,4 @@
-package com.example.mymvvm
+package com.example.mymvvm.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater

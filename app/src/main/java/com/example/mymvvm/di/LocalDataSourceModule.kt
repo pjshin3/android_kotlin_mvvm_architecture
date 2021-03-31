@@ -1,10 +1,10 @@
 package com.example.mymvvm.di
 
 import androidx.room.Room
-import com.example.mymvvm.data.AppDatabase
-import com.example.mymvvm.data.TmpDataDao
-import com.example.mymvvm.repository.ILocalDataSourceRepository
-import com.example.mymvvm.repository.LocalDataSoruceRepository
+import com.example.mymvvm.data.localdata.AppDatabase
+import com.example.mymvvm.data.localdata.TmpDataDao
+import com.example.mymvvm.data.localdata.ILocalDataSourceRepository
+import com.example.mymvvm.data.localdata.LocalDataSoruceRepository
 import com.example.mymvvm.utiles.Defind
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module

@@ -2,9 +2,8 @@ package com.example.mymvvm.di
 
 import com.example.mymvvm.domain.SomeStringUseCase
 import com.example.mymvvm.domain.TmpModelUesCase
-import com.example.mymvvm.repository.ILocalDataSourceRepository
-import com.example.mymvvm.repository.IRemoteDataSourceRepository
-import com.example.mymvvm.repository.RemoteDataSourceRepository
+import com.example.mymvvm.data.localdata.ILocalDataSourceRepository
+import com.example.mymvvm.data.remotedata.IRemoteDataSourceRepository
 import org.koin.dsl.module
 
 val useCaseModule = module {
