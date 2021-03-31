@@ -4,14 +4,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/textview"
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:textSize="50sp"
             android:text="hello new world"/>
+
+        <Button
+            android:id="@+id/buttonview"
+            android:layout_marginTop="50dp"
+            android:text="asdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </layout>
