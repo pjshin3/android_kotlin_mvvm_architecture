@@ -5,6 +5,6 @@ import androidx.room.RoomDatabase
 
 
 @Database(entities = [TmpDataModel::class], version = 1)
-abstract class Appdatabase : RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
     abstract fun getTmpDataDao() : TmpDataDao
 }
