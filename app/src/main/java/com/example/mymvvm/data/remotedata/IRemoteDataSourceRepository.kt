@@ -1,5 +1,7 @@
 package com.example.mymvvm.data.remotedata
 
+import org.json.JSONObject
+
 interface IRemoteDataSourceRepository{
-    fun getString() : String
+    suspend fun getbookList(pram: String) : JSONObject
 }

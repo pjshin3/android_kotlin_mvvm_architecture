@@ -8,5 +8,5 @@ typealias ITmpModelUseCase = BaseUsesCase<String, TmpDataModel>
 class TmpModelUesCase(
     private val localDataSoruceRepository: ILocalDataSourceRepository
 ): ITmpModelUseCase {
-    override fun invoke(pram: String): TmpDataModel = localDataSoruceRepository.getTmpmodel()
+    override suspend fun invoke(pram: String): TmpDataModel = localDataSoruceRepository.getTmpmodel()
 }
